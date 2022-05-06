@@ -27,12 +27,12 @@
 }
 
 \newcommand{\shortcoursename}{STUCO: RUSTLANG}
-\newcommand{\courselocation}{GHC 4102}
-\newcommand{\meetingstarttime}{19}
-\newcommand{\meetingendtime}{19:50}
+\newcommand{\courselocation}{PH A18B}
+\newcommand{\meetingstarttime}{18:40}
+\newcommand{\meetingendtime}{19:30}
 \newcommand{\meetingdays}{Wednesday}
-\newcommand{\longsemester}{Spring 2022}
-\newcommand{\shortsemester}{S22}
+\newcommand{\longsemester}{Fall 2022}
+\newcommand{\shortsemester}{F22}
 \newcommand{\academicyear}{2021-22}
 \newcommand{\deptcode}{98}
 \newcommand{\coursecode}{008}
@@ -396,19 +396,15 @@ Successful students in this course will
         \end{itemize}
     \item understand some intermediate to advanced Rust topics such as:
             \begin{itemize}
-                \item declarative and procedural macros
-                \item Rust's approaches to concurrency and parallelism
+                \item declarative macros
+                \item Rust's approaches to concurrency, parallelis and memory
+                    consistency
                 \item \code{unsafe} semantics
             \end{itemize}
     \item complete a substantial (6-9 hour) project in Rust either individually,
         or with a partner
     \item be able to use tools common in the Rust ecosystem, including
         Cargo, \texttt{rustfmt}, \texttt{clippy}, and \texttt{rustdoc}
-    \item understand how to use \url{crates.io} and be familiar with common
-        crates such as
-        \href{https://github.com/rust-random/rand}{\textit{rand}},
-        \href{https://github.com/rust-lang/regex}{\textit{regex}} and
-        \href{https://github.com/chronotope/chrono}{\textit{chrono}}
     \item be able to locate and read Rust documentation
 \end{itemize}
 
@@ -508,22 +504,22 @@ proposals.
 \begin{longtable}{rp{.5\textwidth}@{\hskip .05\textwidth}p{.3\textwidth}}
     Date        & Topic(s)                          & Assignments Released  \\
     \toprule
-    2022-01-19  & Tour of Rust; Motivation; Rust environment setup and tooling
+    2022-08-31  & Tour of Rust; Motivation; Rust environment setup and tooling
                  (\texttt{rustup}, Cargo, \texttt{rustfmt})
                 & Rust setup and environment check                          \\
-    2022-01-26  & \code{struct}, \code{enum}, pattern matching, \code{impl}
+    2022-09-07  & \code{struct}, \code{enum}, pattern matching, \code{impl}
                   blocks; introduction to ownership, lifetimes and the borrow
                   system
                 & Pattern Matching Puzzle                                   \\
-    2022-02-02  & Function types, closures; more advanced ownership semantics
+    2022-09-14  & Function types, closures; more advanced ownership semantics
                 & Function Types Puzzle                                     \\
-    2022-02-09  & Polymorphism, bounded (traits) and unbounded; trait objects
+    2022-09-21  & Polymorphism, bounded (traits) and unbounded; trait objects
                   and dynamic dispatch
                 & Polymorphism Puzzle                                       \\
-    2022-02-16  & Cargo, modules (access modifiers and file structure),
-                 crates, \texttt{rustdoc}
+    2022-09-28  & Livecoding a library for text iteration: applying lifetimes,
+                  polymorphism, traits.
                 & Midterm                                                   \\
-    2022-02-23  & \code{std}, feat. \begin{itemize}
+    2022-10-05  & \code{std}, feat. \begin{itemize}
                         \item \code{Vec<T>};
                         \item \code{Iterator}, \code{IntoIterator};
                         \item \code{Debug}, \code{Display};
@@ -535,7 +531,7 @@ proposals.
                         \item \code{Cell}, \code{RefCell}
                     \end{itemize}
                 & Graph Algorithms with \code{std}                          \\
-    2022-03-02  & Strings and handling text \begin{itemize}
+    2022-10-12  & Strings and handling text \begin{itemize}
                         \item \code{String} vs \code{&str},
                         \item UTF-8 and other encodings,
                         \item \code{OsStr},
@@ -543,62 +539,38 @@ proposals.
                         \item \code{FromStr}
                     \end{itemize}
                 & Note: all prior released assignments due at this point    \\
-    2022-03-09  & Spring Break (no class)
+    2022-10-19  & Fall Break (no class)
                 & ---                                                       \\
-    2022-03-16  & Error handling: \code{panic!}, \code{?}, testing: unit tests,
+    2022-10-26  & Error handling: \code{panic!}, \code{?}, testing: unit tests,
                   property based testing
                   (\href{https://github.com/AltSysrq/proptest}{\textit{proptest}})
                   and fuzzing
                   (\href{https://github.com/rust-fuzz/cargo-fuzz}{\textit{cargo-fuzz}})
                 & ---                                                       \\
-    2022-03-23  & Macros: built-in, declarative, procedural
+    2022-11-02  & Macros: built-in, declarative, procedural
                 & Macro Puzzle                                              \\
-    2022-03-30  & \code{unsafe}: \begin{itemize}
+    2022-11-09  & \code{unsafe}: \begin{itemize}
                         \item Why have \code{unsafe}?
                         \item Raw pointers
                         \item \code{UnsafeCell}
                         \item \code{unsafe} functions and traits
                         \item \code{static mut}
-                        \item Variance and the drop check
                         \item FFI (\code{extern},
                             \href{https://github.com/rust-lang/rust-bindgen}{\textit{bindgen}},
                             \href{https://github.com/dtolnay/cxx}{\textit{cxx}})
                     \end{itemize}
                 & ---                                                       \\
-    2022-04-06  & Concurrency/Parallelism 1: threads, mutexes, atomics,
-                  \code{Sync}, \code{Send},
-                  \href{https://github.com/rayon-rs/rayon}{\textit{rayon}},
-                  \href{https://github.com/Amanieu/parking_lot}{\textit{parking\_lot}}
+    2022-11-16  & Concurrency/Parallelism 1: threads, mutexes,
+                  \code{Sync}, \code{Send}
                 & ---                                                       \\
-    2022-04-13  & Concurrency/Parallelism 2: \code{Pin}, \code{async},
+    2022-11-23  & Thanksgiving Break (no class)
+                & ---                                                       \\
+    2022-11-30  & Concurrency/Parallelism 2: \code{Pin}, \code{async},
                   \code{await}, futures, streams, polling,
-                  \href{https://tokio.rs/}{\textit{tokio}},
-                  \href{https://github.com/taiki-e/pin-project}{\textit{pin\_project}}
+                  \href{https://tokio.rs/}{\textit{tokio}}
                 & ---                                                       \\
-    2022-04-20  & (Other) Common Crates:
-                  \href{https://github.com/rust-random/rand}{\textit{rand}},
-                  \href{https://github.com/rust-lang/regex}{\textit{regex}},
-                  \href{https://github.com/chronotope/chrono}{\textit{chrono}},
-                  \href{https://github.com/dtolnay/thiserror}{\textit{thiserror}},
-                  \href{https://github.com/dtolnay/anyhow}{\textit{anyhow}},
-                  \href{https://github.com/rust-lang-nursery/lazy-static.rs}{\textit{lazy\_static}}, 
-                  \href{https://serde.rs/}{\textit{serde}},
-                  \href{https://github.com/Geal/nom}{\textit{nom}},
-                  \href{https://github.com/lokathor/bytemuck}{\textit{bytemuck}},
-                  and more.
-                & ---                                                       \\
-    2022-04-27  & Additional advanced topics (one of; students decide):
-                    \begin{itemize}
-                        \item \code{#[no_std]}
-                        \item More \code{async}, e.g., \code{async} traits
-                        \item \code{const fn}s and \code{const} generics
-                        \item Limitations with Rust's type system 
-                        \item Web: 
-                            \href{https://rocket.rs/}{\textit{rocket}} /
-                            \href{https://seed-rs.org/}{\textit{seed}} /
-                            \href{https://yew.rs/}{\textit{yew}} /
-                            \href{https://github.com/seanmonstar/warp}{\textit{warp}}
-                    \end{itemize}
+    2022-12-07  & Concurrency/Parallelism 3: atomic variables, memory orderings
+                  and consistency, cmpxchg/cas and ll/sc
                 & Note: all assignments due by this point                   \\
     \bottomrule
 \end{longtable}
