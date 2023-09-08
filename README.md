@@ -82,15 +82,11 @@ Chapter 15
 - Object safety
 
 
-# Remaining topics???
-- Fearless Concurrency
+## Week 10 - 13: Misc Advanced Rust
+- Parallelism & Concurrency
     - Locking
     - Message Passing
-- Async/Await
-- Macros
-- Unsafe
-    - FFI
-- API design / Advanced Types?
+    - Async/Await
 - Essential Rust Crates
     - `no_std`
         - `rand`
@@ -105,6 +101,9 @@ Chapter 15
         - `serde`
         - `criterion`
         - `tokio`
+- Macros
+- Unsafe
+    - FFI
 
 
 

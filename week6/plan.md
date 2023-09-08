@@ -12,8 +12,8 @@
         - Module organization
 - Testing (30 min)
     - `#[cfg(test)]` and `#[test]`
-    - `#[should_panic]` and `Result<T, E>` in tests
     - `cargo test` usage and flags
+    - `#[should_panic]` and `Result<T, E>` in tests
     - Unit testing
 
 ### Extra Material
