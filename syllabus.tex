@@ -31,8 +31,8 @@
 \newcommand{\meetingstarttime}{7:00}
 \newcommand{\meetingendtime}{7:50}
 \newcommand{\meetingdays}{Wednesday}
-\newcommand{\longsemester}{Fall 2024}
-\newcommand{\shortsemester}{F24}
+\newcommand{\longsemester}{Spring 2025}
+\newcommand{\shortsemester}{S25}
 \newcommand{\academicyear}{2024-25}
 \newcommand{\deptcode}{98}
 \newcommand{\coursecode}{008}
@@ -40,7 +40,7 @@
 
 % Headers and Footers
 \pagestyle{fancy}
-\lhead{Owad, Rudo, Tsui}
+\lhead{Tsui, Ruan}
 \rhead{\fullcoursecode\ \shortsemester}
 
 % Rust code
@@ -338,9 +338,8 @@
     \vspace{1em}
 
     \begin{tabular}{@{}rl@{}}
-        Benjamin Owad & \href{mailto:bowad@andrew.cmu.edu}{\texttt{bowad@andrew.cmu.edu}} \\
-        David Rudo & \href{mailto:drudo@andrew.cmu.edu}{\texttt{drudo@andrew.cmu.edu}} \\
-        Connor Tsui & \href{mailto:jrduvall@andrew.cmu.edu}{\texttt{cjtsui@andrew.cmu.edu}} \\
+        Connor Tsui & \href{mailto:cjtsui@andrew.cmu.edu}{\texttt{cjtsui@andrew.cmu.edu}} \\
+        Jessica Ruan & \href{mailto:jwruan@andrew.cmu.edu}{\texttt{jwruan@andrew.cmu.edu}} \\
     \end{tabular}
 
     \vspace{1em}
@@ -365,33 +364,35 @@
 \section*{Course Description}
 
 This course is an introduction to the Rust programming language, a memory-safe
-systems programming language. We will cover a range of topics, from the Rust borrow checker
-to parallelism and the \code{unsafe} keyword.
-Outside of lecture, there will be basic programming exercises, and in the second half of
-the semester there will be a small student-defined project.
+systems programming language. We will cover a range of topics, from the Rust
+borrow checker to parallelism and the \code{unsafe} keyword.
+Outside of lectures, there will be programming exercises (homeworks) that
+students will need to complete in order to pass this course.
 
-This course is taught in Rust, and you are not expected to have any prior exposure to Rust.
-However, this course assumes knowledge of topics covered by \textbf{15--122},
-or equivalent experience with the C programming language.
+This course is taught in Rust and you are not expected to have prior exposure to
+Rust. However, this course assumes knowledge of topics covered by
+\textbf{15--122}, or equivalent experience with the C programming language.
 Knowledge of functional programming idioms taught in \textbf{15--150},
-as well as knowledge of systems programming taught in \textbf{15--213} is a bonus,
-but not strictly required.
+as well as knowledge of systems programming taught in \textbf{15--213} is a
+bonus, but not strictly required.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Learning Objectives}
 
-Students in this course will be able to read, write,
-and reason about Rust code which includes:
+Our objective is that by the end of the semester, students in this course will
+be able to read, write, and reason about Rust code. This includes: 
 
 \begin{itemize}
     \item Core Rust syntax such as \code{struct}, \code{enum}, \code{impl}
-        blocks, pattern matching, generics, and traits
+        blocks, pattern matching, generics, and \code{trait}s
     \item Common Rust types such as \code{Vec<T>}, \code{String}, \code{\&str},
         \code{Option<T>}, and \code{Result<T, E>}
     \item Use of the borrow checker through ownership and \code{move} semantics
-    \item Advanced Rust features such as iterators, lifetimes, closures, and smart pointers
-    \item Advanced Rust patterns such as parallelism, concurrency, macros, and \code{unsafe}
+    \item Advanced Rust features such as iterators, lifetimes, closures, and
+        smart pointers
+    \item Advanced Rust patterns such as parallelism, concurrency, and
+        \code{unsafe}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -399,12 +400,13 @@ and reason about Rust code which includes:
 \section*{Additional Materials}
 
 Access to a computer able to run \texttt{rustc} (the Rust compiler) and 
-\texttt{cargo} (the Rust package manager) is required for this course.
-If you are on stable versions of Mac, Windows, or Linux, you should be fine.
-We'll go over how to set these up in class with \texttt{rustup},
-Rust's official tool chain manager, or you can follow the steps from
-the official Rust 
-\href{https://www.rust-lang.org/tools/install}{\color{blue}{website}}.
+\texttt{cargo} (the Rust package manager) is required for this course. If you
+are on stable versions of Mac, Windows, Nintendo Switch, or Linux, you should be
+fine.
+
+We will go over how to set these up in class with \texttt{rustup} (Rust's
+official tool chain manager), or you can follow the steps from the official Rust 
+\href{https://www.rust-lang.org/tools/install}{\color{blue}website}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -418,17 +420,18 @@ the official Rust
     Week        & Topics \textit{(subject to change)}     \\
     \toprule
     Week 1      & Introduction \\
-    Week 2      & Ownership \\
+    Week 2      & Ownership (Part 1) \\
     Week 3      & Structs \& Enums \\
     Week 4      & Standard Collections and Generics \\
-    Week 5      & Error Handling and Traits \\
-    Week 6      & Modules and Testing \\
-    Week 7      & Crates, Closures, and Iterators \\
-    Week 8      & Lifetimes \\
-    Week 9      & \code{Box<T>} and Trait Objects \\
-    Week 10     & Smart Pointers and \code{unsafe} \\
-    Week 11     & Parallelism \\
-    Week 12     & Concurrency \\
+    Week 5      & Ownership (Part 2) \\
+    Week 6      & Error Handling and Traits \\
+    Week 7      & Modules and Testing \\
+    Week 8      & Crates, Closures, and Iterators \\
+    Week 9      & Lifetimes \\
+    Week 10     & Smart Pointers \& Trait Objects \\
+    Week 11     & Unsafe \\
+    Week 12     & Parallelism \\
+    Week 13     & Concurrency \\
     \bottomrule
 \end{longtable}
 
@@ -436,12 +439,15 @@ the official Rust
 
 \section*{Attendance Policy}
 
-Attendance is mandatory.
+\textbf{Attendance is mandatory.}
 
-\textbf{As per StuCo guidelines, if you have three unexcused absences, you will
+\textbf{As per StuCo guidelines, if you have 3 unexcused absences, you will
 automatically fail this course}.
 
-\vspace{1em}
+\textbf{In other words, if you miss 3 lectures without getting an excuse from
+us, the StuCo board \textit{requires} us to fail you.}
+
+\textbf{Please let us know if you are going to miss a lecture in advance.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -453,39 +459,30 @@ If you need to miss a session for a reason we can reasonably excuse, contact us
 and we will determine an appropriate alternative so you don't miss out on that
 week's content.
 
-\vspace{1em}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Grading}
 
-The final course grade will be calculated using the following categories.
+Grading is determined solely by homework assignments. Most of these assignments
+are autograded on Gradescope, but there are a few manually graded assignments
+that are worth more in the second half of the semester.
 
-\begin{center}
-    \begin{tabular}{@{}lr@{}}
-        Assessment Type            & Total Percentage   \\ \toprule
-        Programming Assignments    &          65        \\
-        Final Project              &          35        \\ \bottomrule
-    \end{tabular}
-\end{center}
-
-\vspace{1em}
-
-Grades will be assigned as follows, based on the number of points earned.
+In order to pass this course (grade letter P or S), you must accumulate 1000
+points. By default, homeworks are worth 100 points each. However, many of the
+homeworks have up to 50 extra credit points. Manually graded assignments will
+be worth double a normal assignment, but will be graded much harsher. There
+will also be many opportunities for extra credit through submission of feedback
+forms to us.
 
 \begin{center}
     \begin{tabular}{@{}ll@{}}
-        Grade    & Points    \\ \toprule
-        P (or S) & 60--100   \\
-        NP       & 0--60     \\ \bottomrule
+        Grade    & Points       \\ \toprule
+        NP       & 0--1000      \\
+        P (or S) & 1000+        \\ \bottomrule
     \end{tabular}
 \end{center}
 
 \vspace{1em}
-
-In order to pass this course, you will either need to complete all autograded
-homeworks, or you will need to gain at least 25 points through homeworks and
-complete a final project, which will be graded manually.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -496,7 +493,7 @@ complete a final project, which will be graded manually.
 \subsection*{Homework}
 
 There will be weekly homeworks where you will write Rust code applying topics
-we've discussed in lecture. Homeworks are designed to take around an hour per
+we have discussed in lecture. Homeworks are designed to take around an hour per
 week. If they take longer than this, please tell us! \textbf{All homeworks are
 due the week after they are released, right before class starts}.
 
@@ -504,14 +501,14 @@ Homeworks will be submitted and auto-graded on Gradescope.
 
 \subsection*{Solutions}
 
-We expect you to turn in a submission for every homework, as we believe the
-best way to learn a programming language is to \textit{actually write code}.
-You can only learn so much from watching someone else use a language, and this
-is especially true for Rust.
+We expect you to turn in a submission for every homework, as we believe that
+the best way to learn a programming language is to \textit{actually write
+code}. You can only learn so much from watching someone else use a language,
+and this is especially true for Rust.
 
 However, we understand that you are all busy students, and we do not want this
-course to be a burden. \textbf{This semester, we will be publishing all of the
-homework solutions \textit{before} the deadline.}
+course to be a burden. \textbf{Therefore, we publish all the homework solutions
+on our course \href{https://github.com/rust-stuco}{\color{cyan}{GitHub page}}.}
 
 There are a few consequences of this decision. The most obvious is that you will
 have access to a correct solution before you even start. We \textbf{strongly
@@ -520,9 +517,9 @@ attempt at finishing the homeworks themselves. You will not learn much from
 copying and pasting our solutions as your own (and we will be able to see if
 you do that).
 
-Referencing these solutions should be a \textit{last resort} for when you either
-do not have any time to finish the homeworks, or if you are somehow unable to
-get in contact with us to ask for help.
+\textbf{Referencing these solutions should be a \textit{last resort} for when
+you either do not have time to finish the homeworks, or if you are somehow
+unable to get in contact with us to ask for help.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -533,19 +530,26 @@ circumstances, if you let us know in advance, you can get more late days.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section*{Time Commitment}
+
+This StuCo is a 3-credit course, which means that this course should require
+around 3 hours of your time a week, including the 50-minute lecture.
+
+If you find yourself spending more than 3 hours, please let us know immediately
+so that we can either help you or adjust something in the course itself.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section*{Passing}
 
-Echoing the above, to pass this course you will either need to complete all 
-autograded homeworks or complete a few homeworks and a final project.
-
-However, in the case that a student is unable to get to the passing boundary
-for any reason, they can reach out to us and we will make sure to work with
-them and provide secondary paths towards passing.
+In the case that a student is unable to get to the passing boundary for any
+reason, they can reach out to us and we will make sure to work with them and
+provide alternate paths towards passing.
 
 In other words, there are only two ways to fail this course. The first is
 gaining three unexcused absences, which is due to StuCo guidelines. The second
 is the combination of not completing the homeworks \textit{and} not reaching
-out to us (you will have to reach out to us if you want to do a final project.
+out to us (you will have to reach out to us if you want to do a final project).
 
 \textit{Please} always make sure to reach out to us on Piazza or over email if
 you have \textit{any} concerns!
@@ -560,11 +564,11 @@ you have \textit{any} concerns!
 
 \subsection*{Academic Integrity}
 
-Discussion of homework problems, written or verbal, is not only permitted, but 
+Discussion of homework problems, written or verbal, is not only permitted, but
 encouraged.
 
-That being said, verbatim or like-verbatim copying of answers over any medium 
-is expressly forbidden. This includes copying and pasting our solutions.
+\textbf{That being said, verbatim or like-verbatim copying of answers over any
+medium is expressly forbidden. This includes copying and pasting our solutions.}
 
 If you find yourself needing to do this, talk to us! It might be the case that
 a change needs to happen on our end, not yours.
