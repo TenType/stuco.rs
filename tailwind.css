@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+    --color-foreground: #D1D5DB;
+    --color-background: #051726;
+
+    --color-primary: #FDBA74;
+    --color-secondary: #FB923C;
+    --color-tertiary: #4B5563;
+}
+
+@layer base {
+    body {
+        @apply bg-background text-foreground leading-relaxed;
+    }
+}

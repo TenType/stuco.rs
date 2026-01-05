@@ -1,0 +1,12 @@
+[application]
+public_dir = "public"
+
+[web.app]
+title = "Intro to Rust Lang"
+
+[web.resource]
+style = []
+script = []
+
+[web.resource.dev]
+script = []
