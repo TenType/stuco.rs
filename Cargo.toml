@@ -14,4 +14,4 @@ default = ["web"]
 web = ["dioxus/web"]
 
 [profile.release]
-strip = "debuginfo"
+debug = false
