@@ -167,7 +167,7 @@ You can follow the steps from the official Rust #unstyled-link("https://www.rust
   This means that you can miss _up to_ 2 lectures at most.
 ]
 
-Please let us know if you are going to miss a lecture in advance (at least 6 hours before)! All it takes is a private post on Piazza.
+Please let us know if you are going to miss a lecture in advance (at least 2 hours before)! All it takes is a private post on Piazza.
 
 Note that you should *not* email us for an excusal, as emails can be lost / forgotten quite easily. Simply ask us on Piazza.
 
